@@ -1,10 +1,6 @@
 # Targeting the High-Value Risk Zone
 ### Prioritising AI-Reskilling Investment in the Age of AI
 
-**MAN6777 — Data Analytics Portfolio (Assessment 3)** · Author: Yasaman Khademi Gilchalan
-
----
-
 ## 1. Managerial Problem Definition
 
 In the era of accelerating AI adoption, organisations face a new workforce challenge. The main decision is which employee groups should be prioritised for investment in AI reskilling. The organisation must identify high-salary roles that are highly exposed to automation. These roles are the most financially material to lose, because they combine high salary cost with a high probability of displacement. The decision-maker in this project is the Chief People Officer (CPO) of a mid-to-large technology and operations enterprise, who must allocate a limited learning and development budget across the workforce. Because intuition alone cannot reveal which roles are most at risk, this decision must be grounded in data analysis.

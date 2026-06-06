@@ -94,8 +94,8 @@ Two complementary techniques were used. The **regression was produced in Excel's
 automation_trap/
 ├── README.md                     <- This report
 ├── images/                       <- Dashboard & chart screenshots
-├── Dashboard & Script/           <- Power BI dashboard (.pbix) + Python script
-└── Data/                         <- Excel dataset (includes regression sheet)
+├── dashboard_script/             <- Power BI dashboard (.pbix) + Python script
+└── data/                         <- Excel dataset (includes regression sheet)
 ```
 
 ## How to Reproduce the Analysis

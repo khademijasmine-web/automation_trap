@@ -1,7 +1,6 @@
 # Targeting the High-Value Risk Zone
 ### Prioritising AI-Reskilling Investment in the Age of AI
 
-**MAN6777 — Data Analytics Portfolio (Assessment 3)** · Author: Yasaman Khademi Gilchalan
 
 ---
 

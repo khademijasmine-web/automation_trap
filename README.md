@@ -23,6 +23,7 @@ This analysis draws on the Global AI Impact on Jobs (2010–2025) dataset, compr
 | Stable | 20.0% | $38,984 | 0.43 | low pay, low risk |
 
 ![Workforce split by quadrant](images/figure1_quadrants.png)
+
 *Figure 1 — Workforce split across the four strategic quadrants. The High-Value Risk Zone holds 22.4% of all roles.*
 
 Roles that engage with AI carry roughly one-third the automation risk of those that don't, and earn 58% higher salaries. It means AI engagement is the lever that moves a role out of the danger zone and into a better-paid, more durable quadrant. To validate these quadrant patterns statistically, a linear regression and a Python correlation matrix were run on the continuous variables; both confirm that AI engagement strongly predicts lower automation risk, with the full output in the Technical Appendix below.
@@ -34,6 +35,7 @@ This analysis points to two clear actions for the CPO.
 **Recommendation 1: Launch a targeted AI-reskilling programme for the High-Value Risk Zone.** Direct the first wave of the budget at the 22.4% of roles that are well-paid yet highly exposed, to build their AI skills. The reason is simple: jobs that use AI have about three times less risk of being automated than jobs that don't, so AI reskilling is the most effective protection for these valuable positions.
 
 ![Exposure by industry](images/figure2_industry.png)
+
 *Figure 2 — Share of High-Value Risk Zone roles by industry.*
 
 **Recommendation 2: Start with the most exposed industries.** As Figure 2 shows, Government (25.8%), Healthcare (23.9%), and Education (23.7%) hold the largest share of high-value, high-risk roles, so the programme should roll out there first. Finance, the least exposed at 16.8%, can wait. This focuses the limited budget where the threat is greatest, and the payoff comes fastest.
@@ -51,6 +53,7 @@ The dataset contains 5,000 job listings across 44 countries, 9 industries and 16
 ## The Great Shift (2010–2025)
 
 ![AI rises, risk falls](images/figure3_trend.png)
+
 *Figure 3 — From 2010 to 2025, average AI intensity rose while average automation risk fell.*
 
 This trend establishes urgency: the labour market is already migrating toward AI-centric roles, so reskilling aligns the workforce with where the market is heading, not just where it is today.
@@ -70,6 +73,7 @@ Teaching AI skills is not a vague hope; it is a statistically proven lever for c
 ## Correlation Matrix — How the key factors connect
 
 ![Correlation matrix](images/figure4_correlation.png)
+
 *Figure 4 — Pearson correlation matrix of the four numeric variables (produced in Python).*
 
 | Relationship | r | What it means |

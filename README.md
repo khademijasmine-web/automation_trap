@@ -1,6 +1,7 @@
 # Targeting the High-Value Risk Zone
 ### Prioritising AI-Reskilling Investment in the Age of AI
 
+**MAN6777 — Data Analytics Portfolio (Assessment 3)** · Author: Yasaman Khademi Gilchalan
 
 ---
 
@@ -22,7 +23,6 @@ This analysis draws on the Global AI Impact on Jobs (2010–2025) dataset, compr
 | Stable | 20.0% | $38,984 | 0.43 | low pay, low risk |
 
 ![Workforce split by quadrant](images/figure1_quadrants.png)
-
 *Figure 1 — Workforce split across the four strategic quadrants. The High-Value Risk Zone holds 22.4% of all roles.*
 
 Roles that engage with AI carry roughly one-third the automation risk of those that don't, and earn 58% higher salaries. It means AI engagement is the lever that moves a role out of the danger zone and into a better-paid, more durable quadrant. To validate these quadrant patterns statistically, a linear regression and a Python correlation matrix were run on the continuous variables; both confirm that AI engagement strongly predicts lower automation risk, with the full output in the Technical Appendix below.
@@ -34,7 +34,6 @@ This analysis points to two clear actions for the CPO.
 **Recommendation 1: Launch a targeted AI-reskilling programme for the High-Value Risk Zone.** Direct the first wave of the budget at the 22.4% of roles that are well-paid yet highly exposed, to build their AI skills. The reason is simple: jobs that use AI have about three times less risk of being automated than jobs that don't, so AI reskilling is the most effective protection for these valuable positions.
 
 ![Exposure by industry](images/figure2_industry.png)
-
 *Figure 2 — Share of High-Value Risk Zone roles by industry.*
 
 **Recommendation 2: Start with the most exposed industries.** As Figure 2 shows, Government (25.8%), Healthcare (23.9%), and Education (23.7%) hold the largest share of high-value, high-risk roles, so the programme should roll out there first. Finance, the least exposed at 16.8%, can wait. This focuses the limited budget where the threat is greatest, and the payoff comes fastest.
@@ -52,7 +51,6 @@ The dataset contains 5,000 job listings across 44 countries, 9 industries and 16
 ## The Great Shift (2010–2025)
 
 ![AI rises, risk falls](images/figure3_trend.png)
-
 *Figure 3 — From 2010 to 2025, average AI intensity rose while average automation risk fell.*
 
 This trend establishes urgency: the labour market is already migrating toward AI-centric roles, so reskilling aligns the workforce with where the market is heading, not just where it is today.
@@ -65,14 +63,13 @@ A simple linear regression (Excel Data Analysis ToolPak, α = 0.05) tested wheth
 |-----------|-------|---------------|
 | R Square | 0.77 | AI intensity explains 77% of the variation in risk |
 | Coefficient (slope) | −0.75 | More AI engagement → lower risk |
-| Significance F (p) | ≈ 0.000 (p < 0.001) | The relationship is statistically significant |
+| Significance F (p) | p < 0.05 | The relationship is statistically significant |
 
 Teaching AI skills is not a vague hope; it is a statistically proven lever for cutting displacement risk. This justifies spending the reskilling budget on AI capability, as stated in Recommendation 1.
 
 ## Correlation Matrix — How the key factors connect
 
 ![Correlation matrix](images/figure4_correlation.png)
-
 *Figure 4 — Pearson correlation matrix of the four numeric variables (produced in Python).*
 
 | Relationship | r | What it means |
@@ -86,7 +83,7 @@ The matrix shows AI engagement does three things at once: it lowers risk, raises
 
 ## Method Note
 
-Two complementary techniques were used. The regression measures the strength and direction of the continuous AI–risk relationship, while the correlation matrix maps how AI, risk, salary and salary growth all move together. To avoid multicollinearity, only the continuous `ai_intensity_score` was used in the regression (not the `ai_mentioned` indicator). All statistics use α = 0.05.
+Two complementary techniques were used. The **regression was produced in Excel's Data Analysis ToolPak** and measures the strength and direction of the continuous AI–risk relationship, while the **correlation matrix was produced in Python** and maps how AI, risk, salary and salary growth all move together. The dashboard was built in Power BI. To avoid multicollinearity, only the continuous `ai_intensity_score` was used in the regression (not the `ai_mentioned` indicator). All statistics use α = 0.05.
 
 ---
 
@@ -100,18 +97,30 @@ automation_trap/
 └── Data/                         <- Excel dataset (includes regression sheet)
 ```
 
-## How to Run the Python Script
+## How to Reproduce the Analysis
 
+This project is fully reproducible across three standard tools.
+
+**Regression (Excel Data Analysis ToolPak):**
+1. Open the Excel file and go to the regression sheet.
+2. Go to Data → Data Analysis → Regression.
+3. Set Input Y Range = `automation_risk_score`, Input X Range = `ai_intensity_score`, tick Labels, and set Confidence Level to 95% (α = 0.05).
+4. Click OK to generate the full regression output (R Square, coefficient, Significance F).
+
+**Correlation matrix (Python):**
 1. Make sure Python is installed.
 2. Open Command Prompt (cmd) and install the libraries:
    ```
    pip install pandas matplotlib openpyxl
    ```
-3. Place the script in the same folder as the Excel data file.
+3. Place `correlation_analysis.py` in the same folder as the Excel data file.
 4. In cmd, navigate to that folder and run:
    ```
    python correlation_analysis.py
    ```
+
+**Dashboard (Power BI):**
+Open the `.pbix` file in Power BI Desktop to explore the interactive dashboard (quadrant split, industry exposure, and the 2010–2025 trend).
 
 ## Data Source
 
